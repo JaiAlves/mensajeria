@@ -13,6 +13,20 @@ public class Send {
     }
 
     private void sendMessage() throws IOException, TimeoutException {
+        /*
+        ConnectionFactory factory = new ConnectionFactory();
+        factory.setUsername(Config.getUser());
+        factory.setPassword(Config.getPassword());
+        factory.setHost(Config.getHost());
+
+        try (Connection connection = factory.newConnection()) {
+            Channel channel = connection.createChannel();
+            channel.queueDeclare(Config.getQueueName(), true, false, false, null);
+            
+            channel.basicPublish(Config.getExchangeName(), Config.getQueueName(), null, Config.getMessage().getBytes("UTF-8"));
+        }
+        */
+        
         ConnectionFactory factory = new ConnectionFactory();
         factory.setHost(Config.getHost());
         factory.setUsername(Config.getUser());
@@ -39,6 +53,7 @@ public class Send {
             System.out.println(" [x] Sent '" + Config.getMessage() + "'");
             System.out.println("Mensagem enviada ...");
         }
+        
     }
 
 }

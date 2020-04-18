@@ -8,10 +8,10 @@ public class Config {
     private static String HOST="localhost";
     private static String USER="guest";
     private static String PASSWORD="guest";
-    private static String PORT="15672";
+    private static String PORT="5672";
 
     //receive
-    private static String QUEUE_NAME="queue.fila2";
+    private static String QUEUE_NAME="queue.fila1";
     private static String EXCHANGE_NAME="";
 
     //send
